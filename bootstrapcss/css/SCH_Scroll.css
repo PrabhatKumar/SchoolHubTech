@@ -1,0 +1,82 @@
+
+
+
+
+#masthead {
+	min-height:270px;
+	background-color:#000044;
+  	color:#aaaacc;
+}
+
+#masthead h1 {
+	font-size: 55px;
+	line-height: 1;
+}
+
+#masthead .well {
+	margin-top:13%;
+	background-color:#111155;
+  	border-color:#000033;
+}
+
+.icon-bar {
+	background-color:#fff;
+}
+
+@media screen and (min-width: 768px) {
+	#masthead h1 {
+		font-size: 100px;
+	}
+}
+
+
+
+
+  
+.navbar-bright li > a:hover {
+    background-color:#B2BE4A;;
+}
+
+
+
+.affix-top,.affix{
+	position: static;
+}
+
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+    position: static;
+  	margin-top:30px;
+  	width:228px;
+  }
+  
+  #sidebar.affix-bottom {
+    position: relative;
+  }
+
+  #sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:228px;
+  }
+}
+
+#sidebar li.active {
+  	border-right-width:4px;
+	border: 1px solid #B2BE4A;
+    background-color: rgba(253, 38, 38, 0.73);
+	color:#fff;
+}
+
+#sidebar li li.active {
+	border: 1px solid #B2BE4A;
+  	border-right-width:3px;
+    background-color: rgba(253, 38, 38, 0.73);
+	color:#fff;
+}
+
+#mainCol h2 {
+	padding-top: 55px;
+    margin-top: -55px;
+}
+

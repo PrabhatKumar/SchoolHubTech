@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+	<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>SchoolHubTech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--  <link href="ex/font-awesome.min.css" rel="stylesheet">  -->
+<link href="bootstrapcss/css/bootstrap.min.css" rel="stylesheet">
+<link href="bootstrapcss/css/bootstrap.css" rel="stylesheet">
+<link href="bootstrapcss/css/SCH_Scroll.css" rel="stylesheet">
+<link href="bootstrapcss/css/a.css" rel="stylesheet">
+<link href="bootstrapcss/css/style.css" rel="stylesheet">
+
+
+
+
+<link href="bootstrapcss/css/login.css" rel="stylesheet">
+
+
+<!--    <link href="new/docs.css" rel="stylesheet"> 
+    <link href="new/prettify.css" rel="stylesheet"> -->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#track-us").show()
+$("#about-us").hide()
+$("#signup").hide()
+$("#contactus").hide()
+
+$("#aboutus").click(function(){
+    $("#about-us").show()
+    $("#track-us").hide()
+    $("#contactus").hide()
+    $("#signup").hide()
+})
+
+$("#sign-up").click(function(){
+    $("#about-us").hide()
+    $("#track-us").hide()
+    $("#contactus").hide()
+    $("#signup").show()
+})
+
+
+$("#contact-us").click(function(){
+    $("#about-us").hide()
+    $("#track-us").hide()
+    $("#contactus").show()
+    $("#signup").hide()
+})
+
+
+
+$("#trackus").click(function(){
+    $("#track-us").show()
+    $("#about-us").hide()
+    $("#contactus").hide()
+    $("#signup").hide()
+
+})
+
+
+})
+</script>
+
+
+<!-- Cousel -->
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script>
+        jQuery(document).ready(function ($) {
+            
+            var schooltechhub_1_SlideoTransitions = [
+              [{b:8500,d:6000,o:-1,r:240,e:{r:2}}],
+              [{b:-1,d:1,o:-1,c:{x:71.0,t:-71.0}},{b:0,d:1000,o:1,c:{x:-71.0,t:71.0},e:{o:7,c:{x:7,t:7}}}],
+              [{b:-1,d:1,o:-1,sX:9,sY:9},{b:1000,d:1000,o:1,sX:-9,sY:-9,e:{sX:2,sY:2}}],
+              [{b:-1,d:1,o:-1,r:-180,sX:9,sY:9},{b:2000,d:1000,o:1,r:180,sX:-9,sY:-9,e:{r:2,sX:2,sY:2}}],
+              [{b:-1,d:1,o:-1},{b:3000,d:2000,y:180,o:1,e:{y:16}}],
+              [{b:-1,d:1,o:-1,r:-150},{b:7500,d:1600,o:1,r:150,e:{r:3}}],
+              [{b:10000,d:2000,x:-379,e:{x:7}}],
+              [{b:10000,d:2000,x:-379,e:{x:7}}],
+              [{b:-1,d:1,o:-1,r:288,sX:9,sY:9},{b:9100,d:900,x:-1400,y:-660,o:1,r:-288,sX:-9,sY:-9,e:{r:6}},{b:10000,d:1600,x:-200,o:-1,e:{x:16}}]
+            ];
+            
+            var schooltechhub_1_options = {
+              $AutoPlay: true,
+              $SlideDuration: 2000,
+              $SlideEasing: $Jease$.$OutQuint,
+              $CaptionSliderOptions: {
+                $Class: $SchooltechhubCaptionSlideo$,
+                $Transitions: schooltechhub_1_SlideoTransitions
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $SchooltechhubArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $SchooltechhubBulletNavigator$
+              }
+            };
+            
+            var schooltechhub_1_slider = new $SchooltechhubSlider$("schooltechhub_1", schooltechhub_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = schooltechhub_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 2020);
+                    schooltechhub_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 60);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
+<style>
+.btn.active {                
+	display: none;		
+}
+
+.btn span:nth-of-type(1)  {            	
+	display: none;
+}
+.btn span:last-child  {            	
+	display: block;		
+}
+
+.btn.active  span:nth-of-type(1)  {            	
+	display: block;		
+}
+.btn.active span:last-child  {            	
+	display: none;			
+}
+</style>
+    <style>
+        
+        /* schooltechhub slider bullet navigator skin 05 css */
+        /*
+        .schooltechhubb05 div           (normal)
+        .schooltechhubb05 div:hover     (normal mouseover)
+        .schooltechhubb05 .av           (active)
+        .schooltechhubb05 .av:hover     (active mouseover)
+        .schooltechhubb05 .dn           (mousedown)
+        */
+        .schooltechhubb05 {
+            position: absolute;
+        }
+        .schooltechhubb05 div, .schooltechhubb05 div:hover, .schooltechhubb05 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 16px;
+            height: 16px;
+            background: url('images/b05.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .schooltechhubb05 div { background-position: -7px -7px; }
+        .schooltechhubb05 div:hover, .schooltechhubb05 .av:hover { background-position: -37px -7px; }
+        .schooltechhubb05 .av { background-position: -67px -7px; }
+        .schooltechhubb05 .dn, .schooltechhubb05 .dn:hover { background-position: -97px -7px; }
+
+        /* schooltechhub slider arrow navigator skin 22 css */
+        /*
+        .schooltechhuba22l                  (normal)
+        .schooltechhuba22r                  (normal)
+        .schooltechhuba22l:hover            (normal mouseover)
+        .schooltechhuba22r:hover            (normal mouseover)
+        .schooltechhuba22l.schooltechhuba22ldn      (mousedown)
+        .schooltechhuba22r.schooltechhuba22rdn      (mousedown)
+        */
+        .schooltechhuba22l, .schooltechhuba22r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 40px;
+            height: 58px;
+            cursor: pointer;
+            background: url('images/a22.png') center center no-repeat; 
+            overflow: hidden;
+        }
+        .schooltechhuba22l { background-position: -10px -31px; }
+        .schooltechhuba22r { background-position: -70px -31px; }
+        .schooltechhuba22l:hover { background-position: -130px -31px; }
+        .schooltechhuba22r:hover { background-position: -190px -31px; }
+        .schooltechhuba22l.schooltechhuba22ldn { background-position: -250px -31px; }
+        .schooltechhuba22r.schooltechhuba22rdn { background-position: -310px -31px; }
+    </style>
+
+
+
+
+
+</head>
+  <body data-spy="scroll" data-target="body" class="body">
+
+<!--<div class="container-fluid" style="height:40px">
+<div class="allcontain">
+<div class="header "   style="height:20px">
+<p class="socialicon"><i class="fa fa-facebook-square" aria-hidden="true"></i> <i class="fa fa-google-plus-square" aria-hidden="true"></i> <i class="fa fa-twitter-square" aria-hidden="true"></i><span class="">give us Call : + 888888888</span>	</div>
+</div></div> -->
+
+
+    <!-- nav start -->
+ <!-- Navigation -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+						<div class="ipad  ">
+						<a class="navbar-brand" href="index.html"><img src="image/schoolhub.png"  class="img-responsive" alt="logo"  style='height:200%'></a>
+					</div>
+<span style='margin-left:5em;'><b>&nbsp;</b></span>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="manu">
+                <ul class="nav   nav-tabs navbar-right" role="tablist">
+                    <li>
+                        <a id="aboutus" href="#aboutus"><strong>ABOUT US</strong></a>
+
+                    </li>
+                    <li>
+                        <a id="contact-us" href="#contact-us"><strong>CONTACT US</strong></a>
+                    </li>
+                    <li>
+                        <a href="#DownloadAPP"><strong>DOWNLOAD APP</strong></a>
+                    </li>
+
+                    <li>
+                        <a id="sign-up" href="#sign-up"><strong>SIGN UP</strong></a>
+                    </li>
+
+                        </ul>
+                    </li>
+                </ul></div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+<!-- nav end -->
+
+<!-- Subhead
+================================================== -->
+<div class="container-carousel" style="background-image:url(image/bg4.jpg);">
+<header class="" id="overview">
+  <div class="xxxx">
+
+
+
+
+<header id="myCarousel" class="slide">
+        <div class="carousel-inner" class="img-responsive toggle_carousel">
+
+
+    <div id="schooltechhub_1" style="position:relative; margin-top:0; margin-bottom:0px; top:0; left: 0%; width: 1200px; height: 380px; overflow: hidden; visibility: hidden;">
+
+
+
+        <div data-u="slides"  style="cursor: default; position:relative; margin-top:0; top:0px; left: 0px; width: 1200px; height: 400px; overflow: hidden;">
+
+            <div data-p="250.00" style="display: none;">
+                <img data-u="image" src="image/image1.jpg" />
+            </div>
+
+           <div data-p="225.00">
+                <img data-u="image" src="image/image3.jpg" />
+            </div>
+ 
+
+            <div data-p="250.00" style="display: none;">
+                <img data-u="image" src="image/image2.jpg" />
+
+
+            </div>
+
+
+            <div data-p="250.00" style="display: none;">
+                <img data-u="image" src="image/image4.jpg" />
+
+
+            </div>
+
+<!--            <div data-p="225.00" style="display: none;">
+                <img data-u="image" src="image/image4.jpg" />
+            </div>
+            <div data-p="225.00" style="display: none;">
+                <img data-u="image" src="image/image5.jpg" />
+
+
+         </div> -->
+
+
+
+
+      </div>
+      <!-- /.carousel-inner -->
+      <!-- Controls -->
+   </div>    
+   <!-- /#homepage-feature.carousel -->
+
+        
+        </div>
+
+        <div data-u="navigator" class="schooltechhubb05" style="bottom:16px;right:16px;" data-autocenter="1">
+            <div data-u="prototype" style="width:16px;height:16px;"></div>
+        </div>
+        <span data-u="arrowleft" class="schooltechhuba22l" style="top:0px;left:auto;width:auto;height:58px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="schooltechhuba22r" style="top:0px;right:auto;width:auto;height:58px;" data-autocenter="2"></span>
+    </div>
+</div>
+    </header>
+
+
+
+
+  </div>
+</header>
+</div>
+
+<!--    <div class="alert alert-danger bs-alert-old-docs">ACCESS AN ONLINE ACADEMICS BOOKSTORE<br>(We deliver books at your doorstep)</div> -->
+  <div class="container"  style="background-color:balck">
+
+
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+<!--      <div class="col-lg-3 bs-docs-sidebar">
+
+
+        <ul class="nav nav-list schoolhub-sidenav">
+
+		<img data-u="" src="image/sidebare.png" />
+          <li class="active"><a id="trackus" href="#trackus" class=""><i class="icon-chevron-right"></i> TRACK ORDER</a></li>
+          <li class="abc"><a id="aboutus" href="#aboutus"><i class="icon-chevron-right"></i> PERSONAL PROFILE</a></i></li>
+          <li class="abc"><a href="#signout"><i class="icon-chevron-right"></i> SIGN OUT</a></li>
+<li>
+            <div class="box abc" style='color:#f0423f'>
+			<div class="info">
+                    <h4 class="text-center"><i class="fa fa-clock-o fa-stack-6x"></i><br> Office Hours:</h4>
+                        <p class="text-center">MON-SAT:<BR>10:00 to 20:00<br>SUN:<br>11:00 to 17:00</p>
+                </div>
+				</div>
+
+</li>
+          
+<!-- <li class="card w-50">
+  <div class="card-block">
+    <h3 class="card-title">Office Hours:</h3>
+    <p class="card-text">Office Hours:<br>Mon-Sat:<br>10:00am to 20:00pm<br>Sun:<br>11:00am to 17:00pm</p>
+  </div>
+
+</li> -->
+
+
+<!--        </ul>
+      </div> -->
+
+
+<div class="col-md-3" id="leftCol">
+<div class="" style="background-color:#fff">
+              	<ul class="nav nav-stacked " id="sidebar">
+				<li class="panel-info ">&nbsp;<img src="image/sidebare.png"></li>
+          <li class="active panel-info"><a id="trackus" href="#trackus" class=""><i class="icon-chevron-right"></i> TRACK ORDER</a></li>
+          <li class="panel-info"><a id="aboutus" href="#"><i class="icon-chevron-right"></i> PERSONAL PROFILE</a></i></li>
+          <li class="panel-info"><a href="#signout"><i class="icon-chevron-right"></i> SIGN OUT</a></li>
+<li class="panel-info panel-info-bottom" style="color:#f0423f">
+
+                    <p class="text-center"><i class="fa fa-clock-o fa-stack-6x"></i><br> Office Hours:</p>
+                        <p class="text-center">MON-SAT:<BR>10:00am to 08:00pm<br>SUN:<br>11:00am to 05:00pm</p>
+
+
+				</li>              	</ul>
+              
+      		</div>  
+</div>
+      <div class="col-lg-9">
+
+
+
+        <!-- Dropdowns
+        ================================================== -->
+        <section id="" style="background-color:#fff">
+          <div class="alert alert-danger text-center" style="margin-top:1px; ">
+            <h4 style="font-family:'OpenSans-SemiBold';" >ACCESS AN ONLINE ACADEMICS BOOKSTORE</h4>
+			(<i>We deliver books at your doorstep</i>)
+          </div>
+</section>
+        <section id="track-us"  style="background-color:balck">
+          <h5></h5>
+			<div class="panel panel-default">
+<!-- body start -->
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-2">
+							<div class="form-group">
+								<label for="stage">STATE:</label></div></div>
+									<div class="col-lg-3">
+										<div class="form-group">
+											<input type="state" class="form-control" id="state" placeholder="Utter Pradesh" name="state">
+											</div>
+									</div>
+
+						<div class="col-lg-3">
+							<div class="form-group">
+							<label for="stage">CITY:</label>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="form-group">
+								<input type="city" class="form-control" id="cty" placeholder="Lucknow" name="state" value="Lucknow">
+							</div>
+						</div>
+					</div> <!-- row end -->
+
+
+					<div class="row">
+						<div class="col-lg-2">
+							<div class="form-group">
+								<label for="stage">SCHOOL/COLLEGE:</label>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="form-group">
+								<select class="form-control">
+								<option>Lucknow Public School</option>
+								<option>Career Convent School</option>
+								<option>St. Tersa's School</option>
+								</select>
+							</div>
+						</div>
+
+
+						<div class="col-lg-3">
+							<div class="form-group">
+							<label for="standard">STANDARD:</label>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="form-group">
+								<select class="form-control">
+								<option>Nursery</option>
+								<option>Class I</option>
+								<option>Class II</option>
+								<option>Class III</option>
+								<option>Class IV</option>
+								<option>Class V</option>
+								</select>
+							</div>
+						</div>
+
+					</div> <!-- row end -->
+
+
+
+</div>
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- <p><center><a href="#DPC" data-toggle="collapse" class="btn btn-default">Display Package Content</a></center></p> -->
+
+<p><div class=" text-center"><a href="#DPC" data-toggle="collapse">        
+        
+        <div class="" data-toggle="buttons">
+            <label class="btn btn-lg btn-success active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked>
+                <i class="fa fa-check"></i> Select Books
+            </label>
+            <label class="btn btn-success">
+                <input type="radio" name="options" id="option2" autocomplete="off">
+                <i class="fa fa-book"></i> DISPLAY PACKAGE CONTENT
+            </label>          
+        </div>
+</div></a></p>
+
+<div id="DPC" class="collapse">
+<p style="color:#f0423f;"><i>** Minimum order should be 300 Rs	for home delivery</i></p>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>BOOK NAME</th>
+        <th>AUTHOR/PUBLISHER</th>
+		<th>PRICE (in Ruppes)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><div class="checkbox"><label>1</label></div></td>
+        <td><div class="checkbox"><label><input type="checkbox" value="" checked>OXFORD READING CIRCLE 7</label></div></td>
+        <td><div class="checkbox">O.U.P</div></td>
+        <td><div class="checkbox"><i class="fa fa-inr"></i>179</div></td>
+      </tr>
+      <tr>
+        <td><div class="checkbox"><label>2</label></div></td>
+        <td><div class="checkbox"><label><input type="checkbox" value="" checked/>GRAMMAR Plus 7(ICSE)</label></div></td>
+        <td><div class="checkbox">RATNA</div></td>
+        <td><div class="checkbox"><i class="fa fa-inr"></i>90</div></td>
+      </tr>
+      <tr>
+        <td><div class="checkbox"><label>3</label></div></td>
+        <td><div class="checkbox"><label><input type="checkbox" value="" checked/>ICSE ENGLISH LANGUAGE 7</label></div></td>
+        <td><div class="checkbox">KRITI</div></td>
+        <td><div class="checkbox"><i class="fa fa-inr"></i>120</div></td>
+      </tr>
+      <tr>
+        <td><div class="checkbox"><label>4</label></div></td>
+        <td><div class="checkbox"><label><input type="checkbox" value=""  checked/>ACTIVE LEARNING DICTIONARY</label></div></td>
+        <td><div class="checkbox">SCHOLASTIC</div></td>
+        <td><div class="checkbox"><i class="fa fa-inr"></i>180</div></td>
+      </tr>
+      <tr>
+        <td><div class="checkbox"><label>5</label></div></td>
+        <td><div class="checkbox"><label><input type="checkbox" value=""  checked/>MUGDHA 7 (ICSE)</label></div></td>
+        <td><div class="checkbox">KRITI</div></td>
+        <td><div class="checkbox"><i class="fa fa-inr"></i>48</div></td>
+      </tr>
+
+      <tr>
+        <td><div class="checkbox"><label>6</label></div></td>
+        <td><div class="checkbox"><label><input type="checkbox" value=""  checked/>NAV NIBANDH RACHNA (OPT.)</label></div></td>
+        <td><div class="checkbox">VISION PUB.</div></td>
+        <td><div class="checkbox"><i class="fa fa-inr"></i>48</div></td>
+      </tr>
+
+      <tr>
+        <td><div class="checkbox"><label>7</label></div></td>
+        <td><div class="checkbox"><label><input type="checkbox" value=""  checked/>VARTIKA PART2</label></div></td>
+        <td><div class="checkbox">KRITI</div></td>
+        <td><div class="checkbox"><i class="fa fa-inr"></i>34</div></td>
+      </tr>
+
+      <tr>
+        <td><div class="checkbox"><label>&nbsp;</label></div></td>
+        <td align="right"><div class="checkbox"><label><b>TOTAL PRICE:</b></div></td>
+        <td><div class="checkbox"><button type="button" class="btn btn-success btn-circle btn-xl">945</button></div></td>
+        <td><div class="checkbox"><b>SchoolHub Price:</b> <button type="button" class="btn btn-success btn-circle btn-xl">845</button></div></td>
+      </tr>
+
+
+      <tr>
+        <td colspan="2"><div class="checkbox"><label><input type="checkbox" value="">I hereby verify the book list and confirm to place order.</label></div></td>
+        <td colspan="2"><div class=""><label><span style="color:#f0423f;">You earn</span> <button type="button" class="btn btn-success btn-circle btn-xl">100</button> <span  style="color:#f0423f;">Free cash delivery</span></label></div></td>
+
+      </tr>
+
+      <tr>
+        <td><div class="radio"><label>PAYMENT MODE:</label></div></td>
+        <td><div class="radio"><label><input type="radio" value="">Cash On Delivery</label></div></td>
+        <td><div class="radio"><label><input type="radio" value="">Bank Transfer </label></div></td>
+
+        <td><div class="radio"><label><button type="button" onclick="myFunction()" class="btn btn-success btn-circle btn-xl">PLACE ORDER</button> </label></div></td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+
+</div>
+
+</div>
+
+
+        <!-- Navbar
+        ================================================== -->
+
+
+
+
+        <!-- Breadcrumbs
+        ================================================== -->
+
+
+
+
+        <!-- Pagination
+        ================================================== -->
+
+
+
+
+        <!-- Labels and badges
+        ================================================== -->
+
+
+
+
+        <!-- Typographic components
+        ================================================== -->
+        
+
+
+
+        <!-- Thumbnails
+        ================================================== -->
+        
+
+
+
+
+        <!-- Alerts
+        ================================================== -->
+        
+
+
+
+
+        <!-- Progress bars
+        ================================================== -->
+        
+
+
+
+
+        <!-- Media object
+        ================================================== -->
+        
+
+
+
+
+
+        <!-- Miscellaneous
+        ================================================== -->
+          </section>
+
+
+ <section id="about-us"  style="background-color:balck">
+<div id="Section1">
+<!--           <div class="page-header">
+<ol class="breadcrumb">
+  <li class="breadcrumb-item text"> ABOUT US</li>
+</ol>
+          </div> -->
+
+
+
+<div class="" style="background-color:#fff">
+    <div class="row">
+        <div class="col-md-4">
+            <!-- begin panel group -->
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                
+                <!-- panel 1 -->
+                <div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab1" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingOne"data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h4 class="sch-heading"><strong>WHAT IS SCHOOLHUBTECH</strong></h4>
+                        </div>
+                    </span>
+                    
+                </div> 
+                <!-- / panel 1 -->
+
+                <!-- panel 2 -->
+                <div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab2" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="collapseTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseThree">
+                            <h4 class="sch-heading collapsed"><strong>WHY SCHOOLHUB</strong></h4>
+                        </div>
+                    </span>
+
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                        <!-- Tab content goes here -->
+<br>With revolution in internet online retails has been one of the most upcoming retail sales in the genre of book sales
+                        </div>
+                    </div>
+                </div>
+                <!-- / panel 2 -->
+                
+                <!--  panel 3 -->
+                <div class="panel panel-default">
+                    <!--wrap panel heading in span to trigger image change as well as collapse -->
+                    <span class="side-tab" data-target="#tab3" data-toggle="tab" role="tab" aria-expanded="false">
+                        <div class="panel-heading" role="tab" id="headingThree"  class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <h4 class="sch-heading"><strong>HOW SCHOOLHUB WORKS</strong></h4>
+                        </div>
+                    </span>
+
+                      </div>
+            </div> <!-- / panel-group -->
+             
+        </div> <!-- /col-md-4 -->
+        
+        <div class="col-md-8">
+
+            <!-- begin macbook pro mockup -->
+            <div class="md-macbook-pro md-glare">
+                <div class="md-lid">
+                    <div class="md-camera"></div>
+                    <div class="md-screen">
+                    <!-- content goes here -->                
+                        <div class="tab-featured-image">
+                            <div class="tab-content ">
+                                <div class="tab-pane in active  sch1 effect5" id="tab1">
+
+                                        <img src="image/aboutus.jpg" alt="tab1" class="img animated bounce infinite img-responsive">
+										<ul style="font-family:'Cabin', Helvetica, Arial, sans-serif; font-size:15px; line-height: 25px; margin:10px;">
+<li>SchoolHub is a portal founded with a simple objective - to empower students, parents and guardians to access an online academic bookstore at their doorstep.</li>
+<li>At SchoolHub we are building a suite of integrated collection of academic books which are referred across multiple schools.</li>
+<li>Our portal tool make it easy for students/parents/guardians to place an order of academic books package online, verify books list beforehand and we then get it hassle free deliver to your residing place.</li>
+<li>We stock nearly every academic books package and most in stock orders are shipped within 24 hours (if not faster!).</li></ul>
+
+                                </div>
+                                <div class="tab-pane   sch1 effect5" id="tab2">
+                                    
+                                        <img src="image/aboutus.jpg"  class="img img-responsive">
+                                    
+<ul><li>Is an approach which emphasizes more on instant acquisition of books rather than price.</li>
+<li>Is a proven and current market preferred approach chosen by parents/guardians.</li>
+<li>Traditional approach is further divided into two types:</li>
+<ul><li>- Off Campus Bookstore</li>
+<li>- On Campus Bookstore</li></ul></li>
+<li>Both On &amp; Off Campus bookstore operate on brick and mortar stores approach<br><i>&nbsp;&nbsp;Brick and mortar is a traditional business approach that deals with its customers face-to-face in an office or store that the business owns or rent</i></li>
+<li>On campus bookstore is most reliable and easiest accessible way for students to buy textbooks.</li>
+<li>Off campus bookstore availability is more in highly populous cities [say Tier 1 and Tier 2 cities].</li>
+<li>As both follows bricks and mortar approach following disadvantages are associated to it:
+<ul><li>	- Are considered to be creating monopolistic market.</li>
+<li>	- Lags transparency with consumers as price is incomparable and non 	flexible.</li></ul></li>
+
+
+</ul>
+
+                                </div>
+                                <div class="tab-pane fade   sch1 effect5" id="tab3">
+                                        <img src="image/schoolhubwork.PNG"  class="img img-responsive">
+<ul><li>With revolution in internet online retails has been one of the most upcoming retail sales in the genre of book sales.</li>
+<li>Countries across globe are adopting this new mechanism.</li>
+<li>This new generation methodology deals fairly and transparently with consumers.</li>
+<li>Consumers are benefitted with lower prices, superior services and real time status on availability of items.</li>
+<li>Easy accessibility to parents/guardians</li></ul>
+                                    
+                                </div>
+                               <div class="tab-pane fade" id="tab4">
+                                        <img src="image/schoolhubwork.PNG"  class="img img-circle img-responsive">
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-base"></div>
+            </div> <!-- end macbook pro mockup -->
+
+
+
+        </div> <!-- / .col-md-8 -->
+    </div> <!--/ .row -->
+</div> <!-- end sidetab container -->
+
+</div> <!-- End Section1 div -->
+</section>
+
+<section id="signup">
+<div class="panel panel-default">
+<div class="form-body">
+    <ul class="nav nav-tabs final-login">
+        <li class="active"><a data-toggle="tab" href="#sectionA">Existing Users</a></li>
+        <li><a data-toggle="tab" href="#sectionB">New User!</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="sectionA" class="tab-pane fade in active">
+        <div class="innter-form">
+            <form class="sa-innate-form" method="post">
+            <label>Email Address</label>
+            <input type="text" name="username">
+            <label>Password</label>
+            <input type="password" name="password">
+            <button type="submit">Sign In</button>
+            <a href="">Forgot Password?</a>
+            </form>
+            </div>
+            <div class="social-login">
+            <p>- - - - - - - - - - - - - Sign In With - - - - - - - - - - - - - </p>
+    		<ul>
+            <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
+            <li><a href=""><i class="fa fa-google-plus"></i> Google+</a></li>
+            <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
+            </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div id="sectionB" class="tab-pane fade">
+			<div class="innter-form">
+            <form class="sa-innate-form" method="post">
+            <label>Name</label>
+            <input type="text" name="username">
+
+
+            <label>Line 1</label>
+            <input type="text" name="Address Line1">
+
+            <label>Line 2</label>
+            <input type="text" name="Address Line2">
+
+            <label>City</label>
+            <input type="text" name="City">
+            <label>Email Address</label>
+            <input type="text" name="username">
+            <label>Password</label>
+            <input type="password" name="password">
+            <button type="submit">Join now</button>
+            </form>
+            </div>
+            <div class="social-login">
+            <p>- - - - - - - - - - - - - Register With - - - - - - - - - - - - - </p>
+			<ul>
+            <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
+            <li><a href=""><i class="fa fa-google-plus"></i> Google+</a></li>
+            <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+</section>
+
+
+<section id="contactus">
+       <div class="row">
+         <div class="col-md-12">
+           <div class="panel panel-default">
+<!-- body start -->
+				<div class="panel-body">
+<div class="col-sm-4 legend">
+
+<div>   <span class="fa-stack fa-1x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-envelope-o fa-stack-1x fa-fw fa-inverse"></i>
+                        </span> <strong>schoolhubtech@gmail.com</strong></div>
+<div>    <span class="fa-stack fa-1x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                        </span> <strong>+ 918874407476</strong>
+
+
+</div>  
+<div>    <span class="fa-stack fa-1x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                        </span> <strong>+ 917985014482</strong>
+</div>
+</div>  <!-- col-sm-4 -->
+
+            <div class="col-md-8 verticalLine">
+                <h3>Send us a Message</h3>
+
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Full Name:</label>
+                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Phone Number:</label>
+                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Email Address:</label>
+                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Message:</label>
+                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+
+
+
+
+
+
+
+				</div> <!-- panel-body -->
+				</div><!-- panel panel-default -->
+				</div><!--col-md-12 -->
+				</div> <!--  row -->
+
+
+</section>
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="panel-footer">
+      <div class="" style="background-color:#b2be4a">
+        <span>&copy;2017 All Right Reserved. Powered By <a href="http://schoolhubtech.com/" target="_blank">SchoolHubTech.</a></span>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--    <script type="text/javascript" src="new/widgets.js"></script> -->
+    <script src="js/jquery.js"></script>
+ <!-- <script src="new/bootstrap-scrollspy.js"></script>  -->
+<!--  <script src="js/scroll.js"></script> -->
+    <script src="js/bootstrap-affix.js"></script>
+    <script src="js/application.js"></script>
+
+    <script src="js/bootstrap-select.min.js"></script> 
+	<script src="js/schooltechhub.slider.debug.js"></script>
+
+	<script src="js/schooltechhub.slider.min.js"></script>
+	<script src="js/schooltechhub.slider.debug.js"></script>
+	<script src="js/schoolhubtech.slider.mini.js"></script>
+	<script src="js/sch_scroll.js"></script>
+
+
+
+
+      <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+<script>
+function myFunction() {
+    alert("Please re-check your selected books before place order");
+}
+</script>
+
+</body></html>
