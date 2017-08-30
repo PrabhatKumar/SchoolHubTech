@@ -3,6 +3,98 @@
 
 
 
+.card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+/*    border-radius: .28571429rem;
+    box-shadow: 0 0px 3px 0 #b2be4a, 0 0 0 0px #b2be4a; */
+	background-color:#fff;
+  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.15);
+
+	color:#000;
+}
+
+.card-block {
+    font-size: 16px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
+    margin: 0;
+    padding: 1.8em;
+    border: none;
+    border-top: 1px solid rgba(211, 234, 108, 0.7);
+    box-shadow: none;
+
+	line-height: 1.5px;
+}
+
+.schlist li {
+    list-style:none;
+}
+
+.schlist li:before {
+    content: "";
+    position:relative;
+    left: -5px;
+    background-color:#b2be4a;
+    
+    display:inline-block;
+    width:5px;
+    height:5px;
+    border-radius:50%
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/*Image zoom*/
 
 
 
+ul.gallery{    
+margin-left: 1vw;     
+margin-right:1vw;  
+}    
+
+.zoom {      
+-webkit-transition: all 0.35s ease-in-out;    
+-moz-transition: all 0.35s ease-in-out;    
+transition: all 0.35s ease-in-out;     
+cursor: -webkit-zoom-in;      
+cursor: -moz-zoom-in;      
+cursor: zoom-in;  
+}     
+
+.zoom:hover,  
+.zoom:active,   
+.zoom:focus {
+/**adjust scale to desired size, 
+add browser prefixes**/
+-ms-transform: scale(1.2);    
+-moz-transform: scale(1.2);  
+-webkit-transform: scale(1.2);  
+-o-transform: scale(1.2);  
+transform: scale(1.2);    
+position:relative;      
+z-index:100;  
+}
+
+/**To keep upscaled images visible on mobile, 
+increase left & right margins a bit**/  
+@media only screen and (max-width: 768px) {   
+ul.gallery {      
+margin-left: 5vw;       
+margin-right: 5vw;
+}
+
+/**TIP: Easy escape for touch screens,
+give gallery's parent container a cursor: pointer.**/
+.DivName {cursor: pointer}
+}

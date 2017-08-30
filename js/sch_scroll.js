@@ -1,15 +1,15 @@
 var $body   = $(document.body);
-var navHeight = $('.navbar').outerHeight(true) + 10;
+var navHeight = $('.navbar').outerHeight(true) + 5;
 
 $('#sidebar').affix({
       offset: {
-        top: 245,
+        top: 260,
         bottom: navHeight
       }
 });
 
 
-$body.scrollspy({
+ $body.scrollspy({
 	target: '#leftCol',
 	offset: navHeight
-});
+}); 
